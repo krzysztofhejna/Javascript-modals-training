@@ -7,10 +7,10 @@
 
     // Functions
 	var showModal = function(event){
-		var getHref = this.getAttribute("href").slice(1);
+		var hrefToId = this.getAttribute("href").slice(1);
         event.preventDefault();
         disableModals();
-        document.getElementById(getHref).classList.add('show');
+        document.getElementById(hrefToId).classList.add('show');
 		document.querySelector('#modal-overlay').classList.add('show');
 	};
 
@@ -28,12 +28,9 @@
     // Event listeners
 	for(var i = 0; i < modalLinks.length; i++){
 		modalLinks[i].addEventListener('click', showModal);
-	}
-
-    for(var i = 0; i < closeButtons.length; i++){
 		closeButtons[i].addEventListener('click', hideModal);
-    }
-    
+	}
+   
 	document.querySelector('#modal-overlay').addEventListener('click', hideModal);
 		
 	for(var i = 0; i < modals.length; i++){
@@ -41,4 +38,4 @@
 			event.stopPropagation();
 		});
 	}
-})(); 
+})();      
