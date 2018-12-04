@@ -31,7 +31,7 @@
 		closeButtons[i].addEventListener('click', hideModal);
 	}
 
-	document.querySelector('#modal-overlay').addEventListener('click', hideModal);
+document.querySelector('#modal-overlay').addEventListener('click', hideModal);
 
 	for(var i = 0; i < modals.length; i++){
 		modals[i].addEventListener('click', function(event){
